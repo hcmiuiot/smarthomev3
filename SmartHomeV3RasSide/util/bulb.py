@@ -29,7 +29,7 @@ def controlBulb(param):
         order = (param - active)/10
         if order == 1:
             plug = 17
-        if order = 2:
+        if order == 2:
             plug = 18
         if active == 0:
             print('Light: ',int(order),' is turn off')
