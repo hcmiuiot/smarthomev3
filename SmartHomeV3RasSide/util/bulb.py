@@ -6,15 +6,15 @@ except Exception as e:
     print('Hardware Lib Error: {}'.format(e))
 
 def turnOn(plug):
+    led = LED(plug)
     try:
-        led = LED(plug)
         led.on()
     except Exception as e:
         print('Bulb Process Error: ',e)
 
 def turnOff(plug):
+    led = LED(plug)
     try:
-        led = LED(plug)
         led.off()
     except Exception as e:
         print('Bulb Process Error: ',e)
