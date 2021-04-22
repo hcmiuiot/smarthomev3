@@ -5,20 +5,24 @@ try:
 except Exception as e:
     print('Hardware Lib Error: {}'.format(e))
 
-def turnOn(plugLED):
-    led = LED(plugLED)
+def turnOn(led):
     try:
-        led = LED(plugLED)
         led.on()
     except Exception as e:
         print('Bulb Process Error: ',e)
 
-def turnOff(plugLED):
-    led = LED(plugLED)
+def turnOff(led):
     try:
         led.off()
     except Exception as e:
         print('Bulb Process Error: ',e)
+
+def turnLight(plugLED, bool):
+    led = LED(plugLED)
+    if bool == 0:
+        turnOff(led)
+    if bool == 1:
+        turnOn(led)
 
 # Util Code
 def controlBulb(param):
