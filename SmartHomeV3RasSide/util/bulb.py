@@ -7,6 +7,7 @@ except Exception as e:
 
 def turnOn(plug):
     led = LED(plug)
+    print(plug)
     try:
         led.on()
     except Exception as e:
@@ -14,6 +15,7 @@ def turnOn(plug):
 
 def turnOff(plug):
     led = LED(plug)
+    print(plug)
     try:
         led.off()
     except Exception as e:
