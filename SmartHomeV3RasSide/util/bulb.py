@@ -5,24 +5,21 @@ try:
 except Exception as e:
     print('Hardware Lib Error: {}'.format(e))
 
-try:
-    led = LED(17)
-except Exception as e:
-    print('LED Error: ', e)
-
-def turnOn():
+def turnOn(plug):
     try:
+        led = LED(plug)
         led.on()
     except Exception as e:
         print('Bulb Process Error: ',e)
 
-def turnOff():
+def turnOff(plug):
     try:
+        led = LED(plug)
         led.off()
     except Exception as e:
         print('Bulb Process Error: ',e)
 
-# Code
+# Util Code
 def controlBulb(param):
     try:
         param = int(param)
@@ -30,11 +27,11 @@ def controlBulb(param):
         if active == 0:
             order = (param - active)/10
             print('Light: ',int(order),' is turn off')
-            turnOff()
+            turnOff(order)
         elif active == 1:
             order = (param - active)/10
             print('Light: ',int(order),' is turn on')
-            turnOn()
+            turnOn(order)
         else:
             print('Not Valid Param')
     except Exception as e:
