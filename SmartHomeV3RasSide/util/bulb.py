@@ -23,6 +23,7 @@ def turnLight(plugLED, bool):
         turnOff(led)
     if bool == 1:
         turnOn(led)
+    print(led)
 
 # Util Code
 def controlBulb(param):
