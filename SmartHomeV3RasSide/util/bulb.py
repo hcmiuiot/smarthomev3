@@ -31,10 +31,10 @@ def controlBulb(param):
             plug = 18 # Bulb 2
         if active == 0:
             print('Light: ',int(order),' is turn off')
-            turnOff(int(plug))
+            turnOff(plug)
         elif active == 1:
             print('Light: ',int(order),' is turn on')
-            turnOn(int(plug))
+            turnOn(plug)
         else:
             print('Not Valid Param')
     except Exception as e:
