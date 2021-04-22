@@ -15,7 +15,10 @@ app = Flask(__name__)
 def hello():
     return 'Develop: Smarthomev3 - IoTClubs'
 
-mqtt = mqttmodule.appConfig(app)
+try:
+    mqtt = mqttmodule.appConfig(app)
+except Exception as e:
+    print('Error at define mqtt: ',e)
 
 @mqtt.on_connect()
 def handle_connect(client, userdata, flags, rc):
