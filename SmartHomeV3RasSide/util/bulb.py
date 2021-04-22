@@ -28,7 +28,7 @@ def controlBulb(param):
         active = param%10
         order = (param - active)/10
         if order == 1:
-            plug = 17,
+            plug = 17
         else:
             plug = 18 # Bulb 2
         if active == 0:
