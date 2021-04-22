@@ -27,11 +27,11 @@ def controlBulb(param):
         if active == 0:
             order = (param - active)/10
             print('Light: ',int(order),' is turn off')
-            turnOff(int(order))
+            turnOff(int(active))
         elif active == 1:
             order = (param - active)/10
             print('Light: ',int(order),' is turn on')
-            turnOn(int(order))
+            turnOn(int(active))
         else:
             print('Not Valid Param')
     except Exception as e:
