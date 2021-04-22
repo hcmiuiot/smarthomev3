@@ -1,0 +1,1 @@
+smarthomev3 = ['smarthomev3', 'smarthomev3/items/bulb', 'smarthomev3/items/fan', 'smarthomev3/items/temperature', 'smarthomev3/items/humidity']
