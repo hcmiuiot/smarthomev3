@@ -10,14 +10,14 @@ GPIO.setwarnings(False)
 def turnOn(plug):
     try:
         GPIO.setup(plug,GPIO.OUT)
-        GPIO.setup(plug,GPIO.OUT)
+        GPIO.setup(plug,GPIO.HIGH)
     except Exception as e:
         print('Bulb Process Error: ',e)
 
 def turnOff(plug):
     try:
         GPIO.setup(plug,GPIO.OUT)
-        GPIO.setup(plug,GPIO.OUT)
+        GPIO.setup(plug,GPIO.LOW)
     except Exception as e:
         print('Bulb Process Error: ',e)
 
